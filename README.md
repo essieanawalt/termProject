@@ -2,7 +2,7 @@
 
 The start of a project
 
-[Visit the site](https://your-url-here.github.io/repo-name)
+[Visit the site](https://essieanawalt.github.io/termProject/)
 
 ---
 ## Notes to self
