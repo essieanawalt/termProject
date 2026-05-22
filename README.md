@@ -2,6 +2,8 @@
 
 The start of a project
 
+[Visit the site](https://your-url-here.github.io/repo-name)
+
 ---
 ## Notes to self
 - [ ] replace fetch of partials... with react? reusable modules
