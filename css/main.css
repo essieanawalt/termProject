@@ -1,19 +1,26 @@
 :root {
   /* palette */
-  --mint-cream: #eff9f0;
-  --almond-silk: #ddc8c4;
-  --smoky-rose: #896a67;
-  --mauve-shadow: #6b4d57;
-  --coffee-bean: #13070c;
+  --near-white: #faf8f7;
+  --blush-white: #f4eae9;
+  --powder-blue: #d7e4ec;
+  --soft-pink: #fbd2d9;
+  --river-blue: #64a3ca;
+  --cave-dark: #392f30;
+  --little-my: #7f4451;
+  --forest-teal: #17998d;
+  --fjord: #44595a;
+  --foggy-sage: #aac0bd;
+  --winter-sky: #b3cce1;
 
   /* semantic */
-  --color-bg: var(--mint-cream);
-  --color-surface: var(--almond-silk);
-  --color-border: var(--smoky-rose);
-  --color-accent: var(--mauve-shadow);
-  --color-text: var(--coffee-bean);
-  --color-text-muted: var(--smoky-rose);
-  --color-text-on-accent: var(--mint-cream);
+  --color-bg: var(--near-white);
+  --color-surface: var(--powder-blue);
+  --color-border: var(--foggy-sage);
+  --color-accent: var(--river-blue);
+  --color-text: var(--cave-dark);
+  --color-text-muted: var(--fjord);
+  --color-text-on-accent: var(--blush-white);
+  --color-footer-bg: var(--cave-dark);
 
   /* layout */
   --header-h: 60px;
@@ -57,7 +64,7 @@ header {
   transition:
     height 0.3s ease,
     box-shadow 0.3s ease;
-} 
+}
 /* ease -- transition slow, fast, slow */
 
 header.scrolled {
@@ -208,7 +215,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--coffee-bean);
+  background: var(--color-footer-bg);
   color: var(--color-text-on-accent);
   font-size: 0.75rem;
   z-index: 100;
