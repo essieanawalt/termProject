@@ -1,23 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact — Essie Anawalt</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <script src="js/main.js" defer></script>
-</head>
-<body>
+    <script src="js/contact.js" defer></script>
+  </head>
+  <body>
     <header></header>
 
     <div class="page-layout">
-        <main>
-            <p> this is stuff in contact </p>
-        </main>
+      <main>
+        <h1>Contact</h1>
 
-        <aside></aside>
+        <div class="contact-layout">
+          <img
+            class="validation-img"
+            src="img/bear-validation.jpg"
+            alt="an drawing of a bear complaining"
+          />
+
+          <!-- form -->
+          <form id="contact-form">
+            <p class="stacked">
+              <label for="full-name">Full Name</label>
+              <input type="text" id="full-name" name="full_name" />
+              <span class="field-error" id="full-name-error"></span>
+            </p>
+            <p class="stacked">
+              <label for="email">Email</label>
+              <input type="email" id="email" />
+              <span class="field-error" id="email-error"></span>
+            </p>
+            <p class="stacked">
+              <label for="message">Message</label>
+              <input type="text" id="message" />
+              <span class="field-error" id="message-error"></span>
+            </p>
+            <p class="stacked">
+              <label for="validation">What is the image?</label>
+              <input type="text" id="validation" />
+              <span class="field-error" id="validation-error"></span>
+            </p>
+            <p>
+              <input type="checkbox" id="contact-type" />
+              <label for="contact-type"
+                >This is a business-related inquery</label
+              >
+            </p>
+            <p>
+              <button id="btn-submit">Submit</button>
+            </p>
+          </form>
+
+          <!-- Display confirmation -->
+          <div id="success-message"></div>
+
+          <!-- Display error -->
+          <div id="error-message"></div>
+        </div>
+      </main>
+
+      <aside></aside>
     </div>
 
     <footer></footer>
-</body>
+  </body>
 </html>
