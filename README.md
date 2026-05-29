@@ -11,6 +11,7 @@ The start of a project
 - [ ] replace fetch of partials... with react? reusable modules
 - [ ] float page/aside away from left and right edges
 - [ ] how personal do I want to be with this?
+- [ ] add more to the card game (drag and drop? visual cards)
 
 ---
 
@@ -18,18 +19,18 @@ The start of a project
 
 ### Required
 
-- [ ] 5–10 content pages
-- [ ] HTML5
-- [ ] CSS3
+- [ ] 5–10 content pages (4/10)
+- [x] HTML5
+- [x] CSS3
 - [x] JavaScript
 - [ ] TypeScript
 - [ ] React
 - [ ] Web page layout and design
-- [ ] DOM manipulation
+- [x] DOM manipulation
 - [ ] Website usability
 - [x] Code stored publicly on GitHub
 
-### Portfolio Content (choose one or more)
+### Portfolio Content Ideas
 
 - [ ] Biography
 - [x] Interests
@@ -43,4 +44,4 @@ The start of a project
 - [ ] HTML5 API (Drag and Drop, Canvas, SVG, Web Workers, or Geolocation)
 - [ ] TypeScript in React
 - [ ] Connect to a database or external API (CRUD functionality)
-- [ ] Responsive layout using CSS Flexbox or CSS Grid (no frameworks)
+- [x] Responsive layout using CSS Flexbox or CSS Grid (no frameworks)
