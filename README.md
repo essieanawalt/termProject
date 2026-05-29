@@ -5,12 +5,15 @@ The start of a project
 [Visit the site](https://essieanawalt.github.io/termProject/)
 
 ---
+
 ## Notes to self
+
 - [ ] replace fetch of partials... with react? reusable modules
 - [ ] float page/aside away from left and right edges
 - [ ] how personal do I want to be with this?
 
 ---
+
 ## Deliverables Checklist
 
 ### Required
@@ -18,7 +21,7 @@ The start of a project
 - [ ] 5–10 content pages
 - [ ] HTML5
 - [ ] CSS3
-- [ ] JavaScript
+- [x] JavaScript
 - [ ] TypeScript
 - [ ] React
 - [ ] Web page layout and design
@@ -29,8 +32,8 @@ The start of a project
 ### Portfolio Content (choose one or more)
 
 - [ ] Biography
-- [ ] Interests
-- [ ] Web-based contact form
+- [x] Interests
+- [x] Web-based contact form
 - [ ] Resume
 - [ ] Photo gallery
 - [ ] Showcase skills learned in the course

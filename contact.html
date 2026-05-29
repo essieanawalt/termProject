@@ -32,24 +32,22 @@
             </p>
             <p class="stacked">
               <label for="email">Email</label>
-              <input type="email" id="email" />
+              <input type="email" id="email" name="email" />
               <span class="field-error" id="email-error"></span>
             </p>
             <p class="stacked">
               <label for="message">Message</label>
-              <input type="text" id="message" />
+              <textarea id="message" name="message"></textarea>
               <span class="field-error" id="message-error"></span>
             </p>
             <p class="stacked">
-              <label for="validation">What is the image?</label>
-              <input type="text" id="validation" />
+              <label for="validation">What is the image to the left?</label>
+              <input type="text" id="validation" name="validation" />
               <span class="field-error" id="validation-error"></span>
             </p>
             <p>
-              <input type="checkbox" id="contact-type" />
-              <label for="contact-type"
-                >This is a business-related inquery</label
-              >
+              <input type="checkbox" id="business" name="business" />
+              <label for="business">This is a business-related inquery</label>
             </p>
             <p>
               <button id="btn-submit">Submit</button>

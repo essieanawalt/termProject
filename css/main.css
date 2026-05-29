@@ -28,6 +28,10 @@
   --footer-h: 36px;
   --aside-w: 240px;
 
+  /* border radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+
   /* typography */
   --font-serif: Georgia, "Times New Roman", serif;
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -223,6 +227,14 @@ button#btn-submit {
   border-radius: 1rem;
   font-size: 0.9rem;
   cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+button#btn-submit:hover {
+  background-color: var(--river-blue);
+  transform: scale(1.04);
 }
 
 /* -- footer -- */
