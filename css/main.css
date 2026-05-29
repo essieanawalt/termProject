@@ -21,11 +21,16 @@
   --color-text-muted: var(--fjord);
   --color-text-on-accent: var(--blush-white);
   --color-footer-bg: var(--cave-dark);
+  --color-error: var(--little-my);
 
   /* layout */
   --header-h: 60px;
   --footer-h: 36px;
   --aside-w: 240px;
+
+  /* border radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
 
   /* typography */
   --font-serif: Georgia, "Times New Roman", serif;
@@ -203,6 +208,33 @@ aside {
 /* -- main -- */
 main {
   padding: 3rem;
+}
+
+main h1 {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+/* buttons */
+button#btn-submit {
+  display: block;
+  margin: 1rem auto;
+  width: 30%;
+  padding: 0.75rem;
+  background-color: var(--color-accent);
+  color: var(--color-text-on-accent);
+  border: none;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+button#btn-submit:hover {
+  background-color: var(--river-blue);
+  transform: scale(1.04);
 }
 
 /* -- footer -- */
