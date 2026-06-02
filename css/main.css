@@ -46,12 +46,26 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 /* -- header -- */
@@ -187,12 +201,13 @@ aside {
   list-style: none;
   margin-top: auto;
   display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
+  flex-direction: row;
+  gap: 1.25rem;
+  font-size: 1.2rem;
 }
 
 .sidebar-links a {
-  font-size: 0.75rem;
+  font-size: 1.5rem;
   letter-spacing: 0.08em;
   text-transform: lowercase;
   color: var(--color-text-muted);
@@ -211,10 +226,27 @@ aside {
 /* -- main -- */
 main {
   padding: 3rem;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 main h1 {
-  grid-column: 1 / -1;
   margin: 0;
 }
 
@@ -236,7 +268,7 @@ main h1 {
 }
 
 .btn:hover {
-  background-color: var(--river-blue);
+  background-color: var(--color-accent);
   transform: scale(1.04);
 }
 

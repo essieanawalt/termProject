@@ -1,16 +1,32 @@
-# Term Project boilerplate
+# Essie Anawalt — Portfolio
 
-The start of a project
+A personal portfolio site built as a term project.
 
 [Visit the site](https://essieanawalt.github.io/termProject/)
+
+---
+
+## About
+
+A personal portfolio site.
+
+Built with HTML5, CSS3, and JavaScript. No frameworks.
+
+---
+
+## Pages
+
+- **Home** — landing page
+- **About** — biography and background
+- **Work** — professional experience
+- **Game** — memory match card game
+- **Contact** — contact form with validation, wired to Formspree
 
 ---
 
 ## Notes to self
 
 - [ ] replace fetch of partials... with react? reusable modules
-- [ ] float page/aside away from left and right edges
-- [ ] how personal do I want to be with this?
 - [ ] add more to the card game (drag and drop? visual cards)
 
 ---
@@ -19,20 +35,20 @@ The start of a project
 
 ### Required
 
-- [ ] 5–10 content pages (4/10)
+- [x] 5–10 content pages (5/10)
 - [x] HTML5
 - [x] CSS3
 - [x] JavaScript
 - [ ] TypeScript
 - [ ] React
-- [ ] Web page layout and design
+- [x] Web page layout and design
 - [x] DOM manipulation
 - [ ] Website usability
 - [x] Code stored publicly on GitHub
 
 ### Portfolio Content Ideas
 
-- [ ] Biography
+- [x] Biography
 - [x] Interests
 - [x] Web-based contact form
 - [ ] Resume
@@ -43,5 +59,5 @@ The start of a project
 
 - [ ] HTML5 API (Drag and Drop, Canvas, SVG, Web Workers, or Geolocation)
 - [ ] TypeScript in React
-- [ ] Connect to a database or external API (CRUD functionality)
+- [x] Connect to a database or external API (contact form via Formspree)
 - [x] Responsive layout using CSS Flexbox or CSS Grid (no frameworks)
