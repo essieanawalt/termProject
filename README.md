@@ -27,7 +27,9 @@ Built with HTML5, CSS3, and JavaScript. No frameworks.
 ## Notes to self
 
 - [ ] replace fetch of partials... with react? reusable modules
-- [ ] add more to the card game (drag and drop? visual cards)
+- [x] add more to the card game (drag and drop? visual cards)
+- [ ] add more to about
+- [ ] review overall layout and style
 
 ---
 
@@ -57,7 +59,7 @@ Built with HTML5, CSS3, and JavaScript. No frameworks.
 
 ### Extra Credit (optional, up to 10%)
 
-- [ ] HTML5 API (Drag and Drop, Canvas, SVG, Web Workers, or Geolocation)
+- [ ] HTML5 API (Drag and Drop, Canvas, SVG, Web Workers, or Geolocation) (drag & drop game)
 - [ ] TypeScript in React
 - [x] Connect to a database or external API (contact form via Formspree)
 - [x] Responsive layout using CSS Flexbox or CSS Grid (no frameworks)
