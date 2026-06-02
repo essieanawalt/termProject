@@ -19,7 +19,7 @@
   --color-accent: var(--river-blue);
   --color-text: var(--cave-dark);
   --color-text-muted: var(--fjord);
-  --color-text-on-accent: var(--blush-white);
+  --color-text-on-accent: var(--near-white);
   --color-footer-bg: var(--cave-dark);
   --color-error: var(--little-my);
 
@@ -118,6 +118,8 @@ header nav a:hover {
 
 /* -- page layout -- */
 .page-layout {
+  max-width: 960px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr var(--aside-w);
   min-height: calc(100vh - var(--header-h) - var(--footer-h));
@@ -134,6 +136,7 @@ aside {
   padding: 2rem 1.5rem;
   background: var(--color-surface);
   border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -216,7 +219,7 @@ main h1 {
 }
 
 /* buttons */
-button#btn-submit {
+.btn {
   display: block;
   margin: 1rem auto;
   width: 30%;
@@ -232,7 +235,7 @@ button#btn-submit {
     transform 0.2s ease;
 }
 
-button#btn-submit:hover {
+.btn:hover {
   background-color: var(--river-blue);
   transform: scale(1.04);
 }
