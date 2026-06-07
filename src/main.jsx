@@ -8,7 +8,7 @@ import App from "./App";
 // StrictMode runs everything twice in development to catch bugs —- doesn't affect production
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/termProject">
       <App />
     </BrowserRouter>
   </StrictMode>,
