@@ -6,6 +6,7 @@
   --soft-pink: #fbd2d9;
   --river-blue: #64a3ca;
   --cave-dark: #392f30;
+  --deep-mire: #13070c;
   --little-my: #7f4451;
   --forest-teal: #17998d;
   --fjord: #44595a;
@@ -88,7 +89,7 @@ header {
 
 header.scrolled {
   height: 44px;
-  box-shadow: 0 2px 16px rgba(19, 7, 12, 0.07);
+  box-shadow: 0 2px 16px color-mix(in srgb, var(--deep-mire) 7%, transparent);
 }
 
 .site-title {
