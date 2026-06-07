@@ -6,7 +6,7 @@ export default function About() {
       <h1>About Me</h1>
       <img
         id="about-me-img"
-        src="/img/essie.jpeg"
+        src={`${import.meta.env.BASE_URL}img/essie.jpeg`}
         alt="photo of essie drinking tea at a table with cards"
         width="300"
         height="300"
