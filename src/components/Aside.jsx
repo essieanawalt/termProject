@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Aside() {
   return (
@@ -17,6 +17,13 @@ export default function Aside() {
         <li>🧺 picnics</li>
         <li>🌿 nature walks</li>
       </ul>
+      <nav className="sidebar-nav">
+        <NavLink to="/" end>home</NavLink>
+        <NavLink to="/about">about</NavLink>
+        <NavLink to="/work">work</NavLink>
+        <NavLink to="/game">game</NavLink>
+        <NavLink to="/contact">contact</NavLink>
+      </nav>
       <ul className="sidebar-links">
         <li>
           <a href="https://github.com/essieanawalt" aria-label="github">

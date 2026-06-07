@@ -7,8 +7,8 @@ export default function Layout({ children }) {
     <>
       <Header />
       <div className="page-layout">
-        <main>{children}</main>
         <Aside />
+        <main>{children}</main>
       </div>
       <Footer />
     </>
