@@ -77,7 +77,7 @@ export default function Contact() {
       <div className="split-layout">
         <img
           className="validation-img"
-          src="/img/bear-validation.jpg"
+          src={`${import.meta.env.BASE_URL}img/bear-validation.jpg`}
           alt="an drawing of a bear complaining"
           width="300"
           height="300"
