@@ -1,2 +1,4 @@
-metcs601_TermProject.docx
+*.docx
 .DS_Store
+node_modules/
+dist/
