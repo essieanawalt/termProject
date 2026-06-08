@@ -120,7 +120,7 @@ export default function Game() {
         </p>
         <ul>
           <li>🌱 click a card to flip it</li>
-          <li>click a second card to try a match</li>
+          <li>🖱️ click a second card to try a match</li>
           <li>✨ find all pairs to win!</li>
         </ul>
       </div>
