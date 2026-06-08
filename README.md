@@ -27,6 +27,8 @@ npm run deploy
 
 Builds and publishes to the `gh-pages` branch via the `gh-pages` package. GitHub Pages is configured to serve from that branch.
 
+> **Note:** `npm run deploy` builds from your current working directory — always merge changes to `main` before deploying so the deployed site matches version control.
+
 ---
 
 ## Pages
