@@ -45,7 +45,7 @@ Builds and publishes to the `gh-pages` branch via the `gh-pages` package. GitHub
 - [ ] home page needs real content
 - [ ] work page needs real content
 - [ ] resume — add page or section
-- [ ] add page `<title>` per route for browser tabs
+- [x] add page `<title>` per route for browser tabs - n/a, keeping as is for aesthetics
 - [x] active class on nav links
 - [x] dark/light mode
 - [x] replace fetch of partials... with react? reusable modules
@@ -53,10 +53,9 @@ Builds and publishes to the `gh-pages` branch via the `gh-pages` package. GitHub
 ### Things lost during react converstion, to be addressed...
 
 - [ ] how to redo drag-and-drop in game with react?
-- [ ] contact form validation not quite right in react -- mix of how errors appear
-- [ ] contact form image for validation got warped in migration -- keep or drop this?
-- [ ] game, win + moves, lost spacing in between
-- [ ] pages don't have individual titles in tabs... better or worse?
+- [x] contact form validation not quite right in react -- mix of how errors appear
+- [x] contact form image for validation got warped in migration -- keep or drop this?
+- [x] game, win + moves, lost spacing in between
 
 ---
 
