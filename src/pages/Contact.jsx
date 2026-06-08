@@ -13,35 +13,52 @@ const EMPTY_FORM = {
   business: false,
 };
 
+function validate(data) {
+  const e = {};
+  if (!isValidName(data.fullName.trim())) e.fullName = "Invalid name";
+  if (!isValidEmail(data.email.trim())) e.email = "Invalid email";
+  if (!data.message.trim()) e.message = "Invalid message";
+  if (!data.validation.trim()) e.validation = "Invalid image validation text";
+  return e;
+}
+
 export default function Contact() {
   const [form, setForm] = useState(EMPTY_FORM);
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [touched, setTouched] = useState({});
 
-  //TODO: lost real-time validation
-  function validate(data) {
-    const e = {};
-    if (!isValidName(data.fullName.trim())) e.fullName = "Invalid name";
-    if (!isValidEmail(data.email.trim())) e.email = "Invalid email";
-    if (!data.message.trim()) e.message = "Invalid message";
-    if (!data.validation.trim()) e.validation = "Invalid image validation text";
-    return e;
+  function handleBlur(e) {
+    const { name } = e.target;
+    // (prev) => spread pattern keeps all existing fields and only updates the one that changed
+    setTouched((prev) => ({ ...prev, [name]: true }));
+    const fieldErrors = validate(form);
+    setErrors((prev) => ({ ...prev, [name]: fieldErrors[name] }));
   }
 
   function handleChange(e) {
     const { name, value, type, checked } = e.target;
-    // (prev) => spread pattern keeps all existing fields and only updates the one that changed
-    setForm((prev) => ({
-      ...prev,
+    const newForm = {
+      ...form,
       [name]: type === "checkbox" ? checked : value,
-    }));
+    };
+    setForm(newForm);
+    // re-validates live only if user has touched it
+    if (touched[name]) {
+      const fieldErrors = validate(newForm);
+      setErrors((prev) => ({ ...prev, [name]: fieldErrors[name] }));
+    }
   }
 
   async function handleSubmit(e) {
     // stops the browser from refreshing the page on form submit
     e.preventDefault();
     setErrorMessage("");
+    const allTouched = Object.fromEntries(
+      Object.keys(EMPTY_FORM).map((k) => [k, true]),
+    );
+    setTouched(allTouched);
     const newErrors = validate(form);
     setErrors(newErrors);
     if (Object.keys(newErrors).length > 0) return;
@@ -65,6 +82,7 @@ export default function Contact() {
           : `Thank you ${form.fullName} for your message!`,
       );
       setForm(EMPTY_FORM);
+      setTouched({});
       setErrors({});
     } else {
       setErrorMessage("Something went wrong");
@@ -91,9 +109,10 @@ export default function Contact() {
               name="fullName"
               value={form.fullName}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
             {/* only renders the error span if there's actually an error for this field */}
-            {errors.fullName && (
+            {touched.fullName && errors.fullName && (
               <span className="field-error">{errors.fullName}</span>
             )}
           </p>
@@ -105,8 +124,9 @@ export default function Contact() {
               name="email"
               value={form.email}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
-            {errors.email && (
+            {touched.email && errors.email && (
               <span className="field-error">{errors.email}</span>
             )}
           </p>
@@ -117,8 +137,9 @@ export default function Contact() {
               name="message"
               value={form.message}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
-            {errors.message && (
+            {touched.message && errors.message && (
               <span className="field-error">{errors.message}</span>
             )}
           </p>
@@ -130,8 +151,9 @@ export default function Contact() {
               name="validation"
               value={form.validation}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
-            {errors.validation && (
+            {touched.validation && errors.validation && (
               <span className="field-error">{errors.validation}</span>
             )}
           </p>
@@ -151,9 +173,9 @@ export default function Contact() {
             </button>
           </p>
         </form>
-        {successMessage && <div id="success-message">{successMessage}</div>}
-        {errorMessage && <div id="error-message">{errorMessage}</div>}
       </div>
+      {successMessage && <div id="success-message">{successMessage}</div>}
+      {errorMessage && <div id="error-message">{errorMessage}</div>}
     </>
   );
 }
