@@ -19,13 +19,21 @@ npm install
 npm run dev
 ```
 
+## Deploying
+
+```bash
+npm run deploy
+```
+
+Builds and publishes to the `gh-pages` branch via the `gh-pages` package. GitHub Pages is configured to serve from that branch.
+
 ---
 
 ## Pages
 
 - **Home** — landing page, empty
 - **About** — biography and background
-- **Work** — professional experience, maybe... empty
+- **Work** — professional experience, empty
 - **Game** — memory match card game
 - **Contact** — contact form with validation, wired to Formspree
 
@@ -33,9 +41,14 @@ npm run dev
 
 ## Notes to self
 
-- [x] replace fetch of partials... with react? reusable modules
 - [ ] another game for funsies?
-- [ ] added active class to nav links, css to follow
+- [ ] home page needs real content
+- [ ] work page needs real content
+- [ ] resume — add page or section
+- [ ] add page `<title>` per route for browser tabs
+- [x] active class on nav links
+- [x] dark/light mode
+- [x] replace fetch of partials... with react? reusable modules
 
 ### Things lost during react converstion, to be addressed...
 
@@ -52,13 +65,13 @@ npm run dev
 ### Required
 
 - [x] 5–10 content pages (5/10)
-- [ ] HTML5 (react took over the .html)
+- [ ] HTML5 semantic elements (React renders HTML but JSX needs `<section>`, `<article>` etc.)
 - [x] CSS3
 - [x] JavaScript
 - [x] React
 - [x] Web page layout and design
-- [ ] DOM manipulation (react replaced this as well)
-- [ ] Website usability
+- [x] DOM manipulation — `Header.jsx` uses `classList.toggle`, `addEventListener`, `useRef`
+- [ ] Website usability — content pending
 - [x] Code stored publicly on GitHub
 
 ### Portfolio Content Ideas
@@ -72,7 +85,7 @@ npm run dev
 
 ### Extra Credit (optional, up to 10%)
 
-- [ ] HTML5 API (Drag and Drop, Canvas, SVG, Web Workers, or Geolocation)
+- [ ] HTML5 API — drag and drop was in pre-React version, lost in migration
 - [ ] TypeScript
 - [x] Connect to a database or external API (contact form via Formspree)
 - [x] Responsive layout using CSS Flexbox or CSS Grid (no frameworks)
