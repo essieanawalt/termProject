@@ -4,7 +4,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
-import Game from "./pages/Game";
+import Memory from "./pages/Memory";
+import Market from "./pages/Market";
+import Playground from "./pages/Playground";
 
 // to add a new page: import it, add a Route, and create the .jsx file in pages/
 export default function App() {
@@ -43,10 +45,26 @@ export default function App() {
         }
       />
       <Route
-        path="/game"
+        path="/playground"
         element={
           <Layout>
-            <Game />
+            <Playground />
+          </Layout>
+        }
+      />
+      <Route
+        path="/memory"
+        element={
+          <Layout>
+            <Memory />
+          </Layout>
+        }
+      />
+      <Route
+        path="/market"
+        element={
+          <Layout>
+            <Market />
           </Layout>
         }
       />

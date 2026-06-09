@@ -21,7 +21,7 @@ export default function Aside() {
         <NavLink to="/" end>home</NavLink>
         <NavLink to="/about">about</NavLink>
         <NavLink to="/work">work</NavLink>
-        <NavLink to="/game">game</NavLink>
+        <NavLink to="/playground">playground</NavLink>
         <NavLink to="/contact">contact</NavLink>
       </nav>
       <ul className="sidebar-links">

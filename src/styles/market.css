@@ -1,0 +1,124 @@
+/* market-specific color tokens */
+:root {
+  --fruit: #b5451b;
+  --veggies: #4a7c40;
+  --basket-straw: #d4a84b;
+  --basket-wood: #8b6340;
+}
+
+/* stands side by side */
+#produce-stands {
+  display: flex;
+  gap: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+/* basket wrapper — holds the handle without clipping it */
+.basket-wrapper {
+  position: relative;
+  flex: 1;
+  padding-top: 32px;
+}
+
+.basket-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 30px;
+  border: 4px solid var(--basket-wood);
+  border-bottom: none;
+  border-radius: 40px 40px 0 0;
+}
+
+#fruit-basket::before {
+  border-color: var(--fruit);
+}
+
+#vegetable-basket::before {
+  border-color: var(--veggies);
+}
+
+/* basket body */
+.stand {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 2px;
+  height: 100px;
+  overflow: hidden;
+  border: 3px solid var(--basket-wood);
+  border-radius: 6px 6px 24px 24px;
+  background-color: var(--basket-straw);
+  /* wicker crosshatch texture */
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(139, 99, 64, 0.12) 0px,
+      rgba(139, 99, 64, 0.12) 1px,
+      transparent 1px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(139, 99, 64, 0.12) 0px,
+      rgba(139, 99, 64, 0.12) 1px,
+      transparent 1px,
+      transparent 8px
+    );
+  padding: 0.25rem;
+}
+
+/* smaller items inside basket so they crowd naturally */
+.stand canvas {
+  width: 48px;
+  height: 48px;
+}
+
+/* basket labels */
+.stand h3 {
+  width: 100%;
+  margin: 0;
+  padding: 0.3rem;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  background: transparent;
+}
+
+#fruit-stand h3 {
+  color: var(--fruit);
+}
+
+#vegetable-stand h3 {
+  color: var(--veggies);
+}
+
+/* scattered produce on the floor */
+#produce-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+}
+
+#produce-container canvas,
+.stand canvas,
+#produce-container > div {
+  cursor: grab;
+}
+
+/* item shrinks and fades when dropped into a basket */
+@keyframes fall-in {
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
