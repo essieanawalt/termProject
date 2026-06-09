@@ -1,0 +1,102 @@
+{
+  "fruits": [
+    {
+      "id": 1,
+      "name": "Strawberry",
+      "category": "fruit",
+      "color": "red",
+      "seasonal": true,
+      "emoji": "🍓"
+    },
+    {
+      "id": 2,
+      "name": "Banana",
+      "category": "fruit",
+      "color": "yellow",
+      "seasonal": false,
+      "emoji": "🍌"
+    },
+    {
+      "id": 3,
+      "name": "Peach",
+      "category": "fruit",
+      "color": "pink",
+      "seasonal": true,
+      "emoji": "🍑"
+    },
+    {
+      "id": 4,
+      "name": "Lemon",
+      "category": "fruit",
+      "color": "yellow",
+      "seasonal": false,
+      "emoji": "🍋"
+    },
+    {
+      "id": 5,
+      "name": "Clementine",
+      "category": "fruit",
+      "color": "orange",
+      "seasonal": true,
+      "emoji": "🍊"
+    },
+    {
+      "id": 6,
+      "name": "Apple",
+      "category": "fruit",
+      "color": "green",
+      "seasonal": false,
+      "emoji": "🍏"
+    }
+  ],
+  "vegetables": [
+    {
+      "id": 7,
+      "name": "Potato",
+      "category": "vegetable",
+      "color": "brown",
+      "seasonal": false,
+      "emoji": "🥔"
+    },
+    {
+      "id": 8,
+      "name": "Tomato",
+      "category": "vegetable",
+      "color": "red",
+      "seasonal": true,
+      "emoji": "🍅"
+    },
+    {
+      "id": 9,
+      "name": "Corn",
+      "category": "vegetable",
+      "color": "yellow",
+      "seasonal": true,
+      "emoji": "🌽"
+    },
+    {
+      "id": 10,
+      "name": "Cucumber",
+      "category": "vegetable",
+      "color": "green",
+      "seasonal": false,
+      "emoji": "🥒"
+    },
+    {
+      "id": 11,
+      "name": "Radish",
+      "category": "vegetable",
+      "color": "red",
+      "seasonal": true,
+      "emoji": "🫜"
+    },
+    {
+      "id": 12,
+      "name": "Broccoli",
+      "category": "vegetable",
+      "color": "green",
+      "seasonal": false,
+      "emoji": "🥦"
+    }
+  ]
+}

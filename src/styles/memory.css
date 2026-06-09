@@ -1,16 +1,4 @@
-/* game header */
-.game-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-
-#status {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.9rem;
-}
+/* memory match specific styles */
 
 /* game board */
 #game-board {
@@ -55,39 +43,6 @@
 .card.matched:hover {
   transform: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* how to play callout */
-.how-to-play {
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.1rem;
-  background: var(--color-surface);
-  border-left: 3px solid var(--color-accent);
-  border-radius: var(--radius-sm);
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.how-to-play p {
-  margin: 0;
-}
-
-.how-to-play strong {
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: lowercase;
-  color: var(--color-text);
-}
-
-.how-to-play ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
 }
 
 @media (max-width: 480px) {

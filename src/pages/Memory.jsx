@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "../styles/game.css";
+import "../styles/games.css";
+import "../styles/memory.css";
 
 const emojis = ["🍋", "🧶", "🐟", "🍓", "🧸", "🌳", "🫖", "🫜"];
 
@@ -17,7 +18,7 @@ function createCards() {
   }));
 }
 
-export default function Game() {
+export default function Memory() {
   // passing createCards as a reference so React only runs it once
   // if I write useState(createCards()) it calls it on every render
   const [cards, setCards] = useState(createCards);
