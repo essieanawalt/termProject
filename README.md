@@ -19,20 +19,20 @@ npm run dev
 npm run deploy
 ```
 
-Builds and pushes to `gh-pages` via the `gh-pages` package. Always merge to `main` first — `npm run deploy` builds from the working directory, not from git history.
+Builds and pushes to `gh-pages` via the `gh-pages` package. Always merge to `main` first — `npm run deploy` builds from the working directory, not from git history. Please don't try this one, though :)
 
 ---
 
 ## Pages
 
-| Page            | What it is                                    |
-| --------------- | --------------------------------------------- |
-| Home            | intro / lighter about me                      |
-| About           | biography and background                      |
-| Playground      | hub for the games                             |
-| Memory Match    | flip cards, find pairs, count your moves      |
-| Farmer's Market | drag-and-drop produce sorting — desktop only  |
-| Contact         | form with live validation, wired to Formspree |
+| Page            | What it is                                        |
+| --------------- | ------------------------------------------------- |
+| Home            | intro / lighter about me                          |
+| About           | biography and background                          |
+| Playground      | hub for the games                                 |
+| Memory Match    | flip cards, find pairs, count your moves          |
+| Farmer's Market | drag-and-drop produce sorting (no mobile support) |
+| Contact         | form with live validation, wired to Formspree     |
 
 A catch-all 404 route handles unmatched URLs
 
@@ -54,8 +54,17 @@ Built with React and Vite. Styled with plain CSS using custom properties. No UI 
 
 ---
 
-## Extra credit
+## Extra sparkle
 
 - **HTML5 Drag and Drop API** — Farmer's Market game
 - **External API** — contact form via Formspree
 - **Responsive layout** — CSS flexbox + grid, no frameworks
+
+---
+
+## Acknowledgements
+
+AI assistance (Claude) used for the following:
+
+- Troubleshooting how gh-pages works alongside git main/deploy post-react migration
+- color-mix() solution for using variables in css
