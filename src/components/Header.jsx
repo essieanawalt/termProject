@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Header() {
-  // reference to actual DOM element
   const headerRef = useRef(null);
   const [isDark, setIsDark] = useState(false);
 
@@ -11,9 +10,8 @@ export default function Header() {
       headerRef.current?.classList.toggle("scrolled", window.scrollY > 20);
     };
     window.addEventListener("scroll", onScroll);
-    // returning a cleanup function so the listener stops running
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []); // empty array means this only runs once
+    return () => window.removeEventListener("scroll", onScroll); // cleanup on unmount
+  }, []); // once on mount
 
   const toggleTheme = () => {
     document.documentElement.classList.toggle("dark");

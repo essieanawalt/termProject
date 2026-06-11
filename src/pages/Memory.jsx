@@ -35,7 +35,6 @@ export default function Memory() {
 
   function handleCardClick(card) {
     if (card.flipped || card.matched) return;
-    // ?. is optional chaining -— safe to use when firstCard might be null
     if (firstCard?.id === card.id) return;
 
     // 'prev' used to capture current state pre-update
@@ -58,7 +57,6 @@ export default function Memory() {
           : c,
       );
       setCards(next);
-      // every = all cards must pass test; .some() if only one must pass
       if (next.every((c) => c.matched)) {
         setWins((w) => w + 1);
         setTimeout(() => alert("WIN!"), 50); // little delay so flip-visual happens
@@ -103,13 +101,11 @@ export default function Memory() {
 
       <section id="game-board">
         {cards.map((card) => (
-          // key is required by React when rendering a list so it can track which item is which
           <div
             key={card.id}
             className={`card${card.flipped || card.matched ? " flipped" : ""}${card.matched ? " matched" : ""}`}
             onClick={() => handleCardClick(card)}
           >
-            {/* show the emoji if flipped or matched, otherwise show the back face */}
             {card.flipped || card.matched ? card.emoji : "🌱"}
           </div>
         ))}
