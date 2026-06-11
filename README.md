@@ -1,16 +1,10 @@
 # Essie Anawalt — Portfolio
 
-A personal portfolio site built as a term project.
+Personal portfolio built as a term project. It's also a real portfolio — I built it to actually use and develop (after migrating to a different server).
 
 [Visit the site](https://essieanawalt.github.io/termProject/)
 
 ---
-
-## About
-
-A personal portfolio site.
-
-Built with React and Vite. Styled with CSS using custom properties.
 
 ## Running locally
 
@@ -25,66 +19,43 @@ npm run dev
 npm run deploy
 ```
 
-Builds and publishes to the `gh-pages` branch via the `gh-pages` package. GitHub Pages is configured to serve from that branch.
-
-> **Note:** `npm run deploy` builds from your current working directory — always merge changes to `main` before deploying so the deployed site matches version control.
+Builds and pushes to `gh-pages` via the `gh-pages` package. Always merge to `main` first — `npm run deploy` builds from the working directory, not from git history.
 
 ---
 
 ## Pages
 
-- **Home** — landing page, ligher 'about me'
-- **About** — biography and background
-- **Playground** — games available
-- **Memory** — memory match card game
-- **Market** — a produce drag-and-drop game -- currently does NOT work on mobile
-- **Contact** — contact form with validation, wired to Formspree
+| Page            | What it is                                    |
+| --------------- | --------------------------------------------- |
+| Home            | intro / lighter about me                      |
+| About           | biography and background                      |
+| Playground      | hub for the games                             |
+| Memory Match    | flip cards, find pairs, count your moves      |
+| Farmer's Market | drag-and-drop produce sorting — desktop only  |
+| Contact         | form with live validation, wired to Formspree |
+
+A catch-all 404 route handles unmatched URLs
 
 ---
 
-## Notes to self
+## Tech
 
-- [x] another game for funsies?
-- [x] home page needs real content
-- [x] work page needs real content
-- [x] add page `<title>` per route for browser tabs - n/a, keeping as is for aesthetics
-- [x] active class on nav links
-- [x] dark/light mode
-- [x] replace fetch of partials... with react? reusable modules
+Built with React and Vite. Styled with plain CSS using custom properties. No UI frameworks.
 
-### Things lost during react converstion, to be addressed...
+**HTML5** — semantic elements throughout: `<article>`, `<section>`, `<aside>`, `<nav>`, `<main>`, `<header>`, `<footer>`
 
-- [x] how to redo drag-and-drop in game with react? -- made second game with drag-and-drop
-- [x] contact form validation not quite right in react -- mix of how errors appear
-- [x] contact form image for validation got warped in migration -- keep or drop this?
-- [x] game, win + moves, lost spacing in between
+**CSS3** — custom properties, dark/light mode toggle, responsive flexbox + grid, transitions, `color-mix()`
+
+**JavaScript** — form validation with touched-state tracking, game logic, drag-and-drop, Canvas API for produce rendering
+
+**React** — hooks (`useState`, `useEffect`, `useRef`, `useLocation`), React Router, component architecture, lazy state initialisation
+
+**DOM** — `useRef`, `addEventListener`, `classList.toggle`
 
 ---
 
-## Deliverables Checklist
+## Extra credit
 
-### Required
-
-- [x] 5–10 content pages
-- [x] HTML5 semantic elements (React renders HTML but JSX needs `<section>`, `<article>` etc.)
-- [x] CSS3
-- [x] JavaScript
-- [x] React
-- [x] Web page layout and design
-- [x] DOM manipulation — `Header.jsx` uses `classList.toggle`, `addEventListener`, `useRef`
-- [x] Website usability
-- [x] Code stored publicly on GitHub
-
-### Portfolio Content Ideas
-
-- [x] Biography
-- [x] Interests
-- [x] Web-based contact form
-- [x] Showcase skills learned in the course (via playground)
-
-### Extra Credit (optional, up to 10%)
-
-- [x] HTML5 API — drag and drop in market game
-- [ ] TypeScript
-- [x] Connect to a database or external API (contact form via Formspree)
-- [x] Responsive layout using CSS Flexbox or CSS Grid (no frameworks)
+- **HTML5 Drag and Drop API** — Farmer's Market game
+- **External API** — contact form via Formspree
+- **Responsive layout** — CSS flexbox + grid, no frameworks

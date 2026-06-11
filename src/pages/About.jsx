@@ -13,9 +13,9 @@ export default function About() {
       />
       <section>
         <p>
-          I'm a software developer based in Boston, currently buildingenterprise
-          logistics solutions at Centiro and working toward my CIS master's
-          degree at Boston University.
+          I'm a software developer based in Boston, currently building
+          enterprise logistics solutions at Centiro and working toward my CIS
+          master's degree at Boston University.
         </p>
         <p>
           My path into software wasn't a straight line. I started in finance and
