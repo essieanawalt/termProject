@@ -1,6 +1,7 @@
 .validation-img {
   width: 100%;
   max-width: 50vh;
+  height: auto;
   border-radius: 10%;
   margin-left: auto;
   display: block;

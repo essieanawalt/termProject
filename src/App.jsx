@@ -59,6 +59,17 @@ export default function App() {
           </Layout>
         }
       />
+      <Route
+        path="*"
+        element={
+          <Layout>
+            <article>
+              <h1>page not found</h1>
+              <p>This page doesn't exist.</p>
+            </article>
+          </Layout>
+        }
+      />
     </Routes>
   );
 }

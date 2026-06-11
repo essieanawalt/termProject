@@ -45,13 +45,16 @@
   font-size: 0.9rem;
   color: var(--color-text-muted);
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 6fr;
   align-items: center;
   gap: 0.5rem;
 }
 
 .how-to-play p {
   margin: 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
 }
 
 .how-to-play strong {

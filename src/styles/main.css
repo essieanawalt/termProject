@@ -290,6 +290,7 @@ aside {
 /* -- main -- */
 main {
   padding: 3rem;
+  padding-bottom: calc(3rem + var(--footer-h));
   animation: fadeIn 0.4s ease;
 }
 
@@ -356,6 +357,12 @@ footer {
 }
 
 /* -- responsive -- */
+@media (max-width: 900px) {
+  aside {
+    padding: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .page-layout {
     grid-template-columns: 1fr;
@@ -379,9 +386,15 @@ footer {
     gap: 0.75rem;
   }
 
-  .profile-bio,
+  .profile-bio {
+    width: 100%;
+  }
+
   .interest-list {
     width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
   }
 
   .sidebar-links {
@@ -402,5 +415,10 @@ footer {
 
   main {
     padding: 1.5rem 1rem;
+    padding-bottom: calc(1.5rem + var(--footer-h));
+  }
+
+  .split-layout {
+    grid-template-columns: 1fr;
   }
 }
