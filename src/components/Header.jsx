@@ -20,13 +20,15 @@ export default function Header() {
 
   return (
     <header ref={headerRef}>
-      <button
-        className="toggle-theme"
-        onClick={toggleTheme}
-        aria-label="toggle theme"
-      >
-        <i className={isDark ? "fa-regular fa-sun" : "fa-regular fa-moon"}></i>
-      </button>
+      <div className="header-inner">
+        <button
+          className="toggle-theme"
+          onClick={toggleTheme}
+          aria-label="toggle theme"
+        >
+          <i className={isDark ? "fa-regular fa-sun" : "fa-regular fa-moon"}></i>
+        </button>
+      </div>
     </header>
   );
 }

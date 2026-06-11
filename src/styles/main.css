@@ -92,13 +92,23 @@ header {
   top: 0;
   z-index: 100;
   height: var(--header-h);
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
   background: var(--color-bg);
   transition:
     height 0.3s ease,
     box-shadow 0.3s ease;
+}
+
+.header-inner,
+.footer-inner {
+  max-width: var(--layout-w);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 /* ease -- transition slow, fast, slow */
 
