@@ -33,20 +33,20 @@ Builds and publishes to the `gh-pages` branch via the `gh-pages` package. GitHub
 
 ## Pages
 
-- **Home** — landing page, empty
+- **Home** — landing page, ligher 'about me'
 - **About** — biography and background
-- **Work** — professional experience, empty
-- **Game** — memory match card game
+- **Playground** — games available
+- **Memory** — memory match card game
+- **Market** — a produce drag-and-drop game
 - **Contact** — contact form with validation, wired to Formspree
 
 ---
 
 ## Notes to self
 
-- [ ] another game for funsies?
-- [ ] home page needs real content
-- [ ] work page needs real content
-- [ ] resume — add page or section
+- [x] another game for funsies?
+- [x] home page needs real content
+- [x] work page needs real content
 - [x] add page `<title>` per route for browser tabs - n/a, keeping as is for aesthetics
 - [x] active class on nav links
 - [x] dark/light mode
@@ -54,7 +54,7 @@ Builds and publishes to the `gh-pages` branch via the `gh-pages` package. GitHub
 
 ### Things lost during react converstion, to be addressed...
 
-- [ ] how to redo drag-and-drop in game with react?
+- [x] how to redo drag-and-drop in game with react? -- made second game with drag-and-drop
 - [x] contact form validation not quite right in react -- mix of how errors appear
 - [x] contact form image for validation got warped in migration -- keep or drop this?
 - [x] game, win + moves, lost spacing in between
@@ -65,14 +65,14 @@ Builds and publishes to the `gh-pages` branch via the `gh-pages` package. GitHub
 
 ### Required
 
-- [x] 5–10 content pages (5/10)
-- [ ] HTML5 semantic elements (React renders HTML but JSX needs `<section>`, `<article>` etc.)
+- [x] 5–10 content pages
+- [x] HTML5 semantic elements (React renders HTML but JSX needs `<section>`, `<article>` etc.)
 - [x] CSS3
 - [x] JavaScript
 - [x] React
 - [x] Web page layout and design
 - [x] DOM manipulation — `Header.jsx` uses `classList.toggle`, `addEventListener`, `useRef`
-- [ ] Website usability — content pending
+- [x] Website usability
 - [x] Code stored publicly on GitHub
 
 ### Portfolio Content Ideas
@@ -80,13 +80,11 @@ Builds and publishes to the `gh-pages` branch via the `gh-pages` package. GitHub
 - [x] Biography
 - [x] Interests
 - [x] Web-based contact form
-- [ ] Resume
-- [ ] Photo gallery
-- [ ] Showcase skills learned in the course
+- [x] Showcase skills learned in the course (via playground)
 
 ### Extra Credit (optional, up to 10%)
 
-- [ ] HTML5 API — drag and drop was in pre-React version, lost in migration
+- [x] HTML5 API — drag and drop in market game
 - [ ] TypeScript
 - [x] Connect to a database or external API (contact form via Formspree)
 - [x] Responsive layout using CSS Flexbox or CSS Grid (no frameworks)

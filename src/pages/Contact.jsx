@@ -4,7 +4,7 @@ import "../styles/contact.css";
 const isValidName = (value) => (value.match(/[A-Za-z]/g) || []).length >= 2;
 const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
-// defined outside the component so it doesn't get recreated on every render
+// outside the component = not recreated on every render
 const EMPTY_FORM = {
   fullName: "",
   email: "",
@@ -31,7 +31,7 @@ export default function Contact() {
 
   function handleBlur(e) {
     const { name } = e.target;
-    // (prev) => spread pattern keeps all existing fields and only updates the one that changed
+    // spread so I don't overwrite other fields
     setTouched((prev) => ({ ...prev, [name]: true }));
     const fieldErrors = validate(form);
     setErrors((prev) => ({ ...prev, [name]: fieldErrors[name] }));
@@ -44,7 +44,7 @@ export default function Contact() {
       [name]: type === "checkbox" ? checked : value,
     };
     setForm(newForm);
-    // re-validates live only if user has touched it
+    // only re-validate if they've already touched this field
     if (touched[name]) {
       const fieldErrors = validate(newForm);
       setErrors((prev) => ({ ...prev, [name]: fieldErrors[name] }));
@@ -52,7 +52,7 @@ export default function Contact() {
   }
 
   async function handleSubmit(e) {
-    // stops the browser from refreshing the page on form submit
+    // prevent default page refresh on submit
     e.preventDefault();
     setErrorMessage("");
     const allTouched = Object.fromEntries(
@@ -63,7 +63,7 @@ export default function Contact() {
     setErrors(newErrors);
     if (Object.keys(newErrors).length > 0) return;
 
-    // formspree expects snake_case field names, my state uses camelCase -- this is workaround
+    // formspree wants snake_case, my state is camelCase
     const formData = new FormData();
     formData.append("full_name", form.fullName);
     formData.append("email", form.email);
@@ -96,7 +96,7 @@ export default function Contact() {
         <img
           className="validation-img"
           src={`${import.meta.env.BASE_URL}img/bear-validation.jpg`}
-          alt="an drawing of a bear complaining"
+          alt="a drawing of a bear complaining"
           width="300"
           height="300"
         />
@@ -111,7 +111,7 @@ export default function Contact() {
               onChange={handleChange}
               onBlur={handleBlur}
             />
-            {/* only renders the error span if there's actually an error for this field */}
+            {/* only show if there's an error for this field */}
             {touched.fullName && errors.fullName && (
               <span className="field-error">{errors.fullName}</span>
             )}

@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <>
+    <article>
       <h1>Home</h1>
       <p>
         Hi, I'm Essie — a developer with the career history of someone who took
@@ -14,6 +14,6 @@ export default function Home() {
         yet <i>another</i> book at the bookstore, or deep in a cozy corner with
         a cup of tea and my steamdeck.
       </p>
-    </>
+    </article>
   );
 }

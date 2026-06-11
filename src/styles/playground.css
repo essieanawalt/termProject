@@ -1,18 +1,53 @@
-.playground-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
+/* -- game grid -- */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-.playground-nav a {
+.game-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--deep-mire) 10%, transparent);
+}
+
+.game-card-emoji {
+  font-size: 1.75rem;
+}
+
+.game-card h2 {
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+.game-card p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  flex: 1;
+  margin-bottom: 0.5rem;
+}
+
+.game-card-link {
+  font-size: 0.8rem;
   color: var(--color-accent);
   text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   transition: color 0.2s ease;
 }
 
-.playground-nav a:hover {
+.game-card-link:hover {
   color: var(--color-text);
 }

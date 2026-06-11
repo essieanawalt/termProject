@@ -1,6 +1,19 @@
-import { Link, NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 export default function Aside() {
+  const location = useLocation();
+
+  const isPlayground = ["/playground", "/memory", "/market"].includes(
+    location.pathname,
+  ); // list all new games here
+  const [subOpen, setSubOpen] = useState(isPlayground);
+
+  useEffect(() => {
+    // if (isPlayground) setSubOpen(true); // to keep expanded subnav even on other pages
+    setSubOpen(isPlayground);
+  }, [isPlayground]);
+
   return (
     <aside>
       <div className="profile-header">
@@ -18,10 +31,30 @@ export default function Aside() {
         <li>🌿 nature walks</li>
       </ul>
       <nav className="sidebar-nav">
-        <NavLink to="/" end>home</NavLink>
+        <NavLink to="/" end>
+          home
+        </NavLink>
+        <div>
+          <NavLink
+            to="/playground"
+            className={({ isActive }) =>
+              isActive || isPlayground ? "active" : undefined
+            }
+            onClick={() => setSubOpen((o) => !o)}
+          >
+            playground
+          </NavLink>
+          <ul className={`sidebar-subnav${subOpen ? " open" : ""}`}>
+            <li>
+              <NavLink to="/memory">memory</NavLink>
+            </li>
+            <li>
+              <NavLink to="/market">market</NavLink>
+            </li>
+          </ul>
+        </div>
         <NavLink to="/about">about</NavLink>
-        <NavLink to="/work">work</NavLink>
-        <NavLink to="/playground">playground</NavLink>
+
         <NavLink to="/contact">contact</NavLink>
       </nav>
       <ul className="sidebar-links">
