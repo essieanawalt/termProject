@@ -37,7 +37,7 @@ Builds and publishes to the `gh-pages` branch via the `gh-pages` package. GitHub
 - **About** — biography and background
 - **Playground** — games available
 - **Memory** — memory match card game
-- **Market** — a produce drag-and-drop game
+- **Market** — a produce drag-and-drop game -- currently does NOT work on mobile
 - **Contact** — contact form with validation, wired to Formspree
 
 ---

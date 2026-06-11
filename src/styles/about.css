@@ -6,3 +6,13 @@
   border-radius: 25%;
   margin: 0 1.5rem 1rem 0;
 }
+
+@media (max-width: 768px) {
+  #about-me-img {
+    float: none;
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+}
