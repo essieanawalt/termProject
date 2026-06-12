@@ -8,37 +8,62 @@ export default function About() {
         id="about-me-img"
         src={`${import.meta.env.BASE_URL}img/essie.jpeg`}
         alt="photo of essie drinking tea at a table with cards"
-        width="300"
-        height="300"
+        width="160"
+        height="160"
       />
-      <section>
-        <p>
-          I'm a software developer based in Boston, currently building
-          enterprise logistics solutions at Centiro and working toward my CIS
-          master's degree at Boston University.
-        </p>
-        <p>
-          My path into software wasn't a straight line. I started in finance and
-          accounting which is a bit unconventional but invaluable — I learned
-          how to make sense of messy systems and translate what business people
-          actually need into something technical teams can build. I started
-          writing scripts myself early on, and the rest followed.
-        </p>
+      <p>
+        I'm a developer with the career history of someone who took the scenic
+        route. I came to software through finance — an unusual path, but one I
+        wouldn't trade. I started writing scripts early on, and the rest
+        followed.
+      </p>
+      <p>
+        I'm based in Boston, currently building enterprise logistics solutions
+        at Centiro and working toward my CIS master's degree at Boston
+        University.
+      </p>
+
+      <section className="about-section">
         <p>
           These days I work mostly in C# and .NET within a microservices
-          architecture, and I've picked up a lot along the way: cloud platforms,
-          event-driven design, the occasional deep dive into things I probably
-          wasn't supposed to touch on yet. I like problems that require
-          understanding both sides: why something matters and how to actually
-          make it work.
+          architecture. The finance background turns out to be surprisingly
+          useful — I learned how to make sense of messy systems and translate
+          what business people actually need into something technical teams can
+          build. I like problems that require understanding both sides.
         </p>
       </section>
-      <section>
+
+      <section className="about-section">
         <p>
-          Outside of work, I'm learning things like frontend development,
-          database design, and networking which is a fun change of pace from the
-          backend world I usually live in.
+          Outside of work I'm learning frontend development, database design,
+          and networking. A fun change of pace from the backend world I usually
+          live in.
         </p>
+
+        <p>
+          When I'm not at a keyboard you'll find me idling at a cafe, picking up
+          yet <i>another</i> book at the bookstore, or deep in a cozy corner
+          with a cup of tea and my steamdeck.
+        </p>
+      </section>
+
+      <section className="about-section">
+        <p className="section-label">currently working with</p>
+        <ul className="tag-list">
+          <li>C# / .NET</li>
+          <li>Azure</li>
+          <li>Docker</li>
+          <li>MSSQL</li>
+          <li>MongoDB</li>
+          <li>Git</li>
+        </ul>
+        <p className="section-label">currently learning</p>
+        <ul className="tag-list">
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Python</li>
+          <li>Java</li>
+        </ul>
       </section>
     </article>
   );

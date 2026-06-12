@@ -1,18 +1,67 @@
 #about-me-img {
   float: left;
-  width: 300px;
+  display: block;
+  width: 160px;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 25%;
-  margin: 0 1.5rem 1rem 0;
+  margin: 0 2rem 1rem 0;
+}
+
+.about-section {
+  margin-bottom: 2rem;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-label::after {
+  content: "";
+  display: block;
+  height: 1px;
+  flex: 1;
+  background: var(--color-border);
+}
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0;
+}
+
+.tag-list li {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 15%, transparent);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.65rem;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.tag-list li:hover {
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
 }
 
 @media (max-width: 768px) {
   #about-me-img {
     float: none;
-    width: 100%;
-    max-width: 300px;
-    display: block;
-    margin: 0 auto 1rem;
+    width: 120px;
+    margin: 0 auto 1.25rem;
   }
 }

@@ -1,19 +1,35 @@
+import { Link } from "react-router-dom";
+import "../styles/home.css";
+
 export default function Home() {
   return (
     <article>
-      <h1>Home</h1>
-      <p>
-        Hi, I'm Essie — a developer with the career history of someone who took
-        the scenic route. I came to software through finance, which is an
-        unusual path but one I wouldn't trade. Somewhere along the way I
-        realized I liked building things more than analyzing them, and here we
-        are.
-      </p>
-      <p>
-        When I'm not at a keyboard you'll find me idling at a cafe, picking up
-        yet <i>another</i> book at the bookstore, or deep in a cozy corner with
-        a cup of tea and my steamdeck.
-      </p>
+      <div className="home-hero">
+        <h1>I took the scenic route.</h1>
+        <p className="home-tagline">
+          Turns out I liked building things more than analyzing them.
+        </p>
+      </div>
+      <section className="home-cards">
+        <Link to="/about" className="home-card">
+          <i className="fa-solid fa-address-card home-card-icon"></i>
+          <h2>about</h2>
+          <p>The longer story</p>
+          <span className="home-card-cta">read →</span>
+        </Link>
+        <Link to="/playground" className="home-card">
+          <i className="fa-solid fa-gamepad home-card-icon"></i>
+          <h2>playground</h2>
+          <p>Fun little things</p>
+          <span className="home-card-cta">play →</span>
+        </Link>
+        <Link to="/contact" className="home-card">
+          <i className="fa-solid fa-envelope home-card-icon"></i>
+          <h2>contact</h2>
+          <p>Say hello</p>
+          <span className="home-card-cta">write →</span>
+        </Link>
+      </section>
     </article>
   );
 }
