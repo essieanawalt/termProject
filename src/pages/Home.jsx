@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <article>
       <div className="home-hero">
-        <h1>I took the scenic route.</h1>
+        <h1>i took the scenic route.</h1>
         <p className="home-tagline">
           Turns out I liked building things more than analyzing them.
         </p>

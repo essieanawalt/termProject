@@ -104,7 +104,7 @@ export default function Market() {
     <>
       <div className="game-header">
         <div>
-          <h1>Farmer's Market</h1>
+          <h1>farmer's market.</h1>
           <div id="status">
             <span>
               fruits: <strong>{fruitItems.length}</strong>

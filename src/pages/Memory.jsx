@@ -84,7 +84,7 @@ export default function Memory() {
     <>
       <div className="game-header">
         <div>
-          <h1>Memory Match</h1>
+          <h1>memory match.</h1>
           <div id="status">
             <span>
               Wins: <strong>{wins}</strong>
