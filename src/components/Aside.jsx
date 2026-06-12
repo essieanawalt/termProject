@@ -17,7 +17,14 @@ export default function Aside() {
   return (
     <aside>
       <div className="profile-header">
-        <h1>notes...</h1>
+        <img
+          className="profile-photo"
+          src={`${import.meta.env.BASE_URL}img/essie.jpeg`}
+          alt="photo of essie"
+          width="80"
+          height="80"
+        />
+        <p className="profile-name">Essie</p>
       </div>
       <p className="profile-bio">
         Designer & developer living between Boston & Montreal. Given my love of
@@ -34,6 +41,7 @@ export default function Aside() {
         <NavLink to="/" end>
           home
         </NavLink>
+        <NavLink to="/about">about</NavLink>
         <div>
           <NavLink
             to="/playground"
@@ -53,8 +61,6 @@ export default function Aside() {
             </li>
           </ul>
         </div>
-        <NavLink to="/about">about</NavLink>
-
         <NavLink to="/contact">contact</NavLink>
       </nav>
       <ul className="sidebar-links">

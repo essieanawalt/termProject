@@ -16,14 +16,6 @@
   }
 }
 
-/* market-specific color tokens */
-:root {
-  --fruit: #b5451b;
-  --veggies: #4a7c40;
-  --basket-straw: #d4a84b;
-  --basket-wood: #8b6340;
-}
-
 /* stands side by side */
 #produce-stands {
   display: flex;
@@ -126,7 +118,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0rem;
+  gap: 0;
   padding: 0.5rem 0;
 }
 
