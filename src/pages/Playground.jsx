@@ -4,7 +4,7 @@ import "../styles/playground.css";
 export default function Playground() {
   return (
     <article>
-      <h1>Playground</h1>
+      <h1>playground.</h1>
       <section className="game-grid">
         <article className="game-card">
           <span className="game-card-emoji">🃏</span>

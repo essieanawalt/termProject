@@ -91,7 +91,7 @@ export default function Contact() {
 
   return (
     <>
-      <h1>Contact</h1>
+      <h1>contact me.</h1>
       <div className="split-layout">
         <img
           className="validation-img"

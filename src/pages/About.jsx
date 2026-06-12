@@ -3,7 +3,7 @@ import "../styles/about.css";
 export default function About() {
   return (
     <article>
-      <h1>About Me</h1>
+      <h1>about me.</h1>
       <img
         id="about-me-img"
         src={`${import.meta.env.BASE_URL}img/essie.jpeg`}
@@ -14,8 +14,7 @@ export default function About() {
       <p>
         I'm a developer with the career history of someone who took the scenic
         route. I came to software through finance — an unusual path, but one I
-        wouldn't trade. I started writing scripts early on, and the rest
-        followed.
+        wouldn't trade.
       </p>
       <p>
         I'm based in Boston, currently building enterprise logistics solutions
@@ -29,21 +28,16 @@ export default function About() {
           architecture. The finance background turns out to be surprisingly
           useful — I learned how to make sense of messy systems and translate
           what business people actually need into something technical teams can
-          build. I like problems that require understanding both sides.
+          build. I like problems where you have to understand both sides to
+          solve anything.
         </p>
       </section>
 
       <section className="about-section">
         <p>
-          Outside of work I'm learning frontend development, database design,
-          and networking. A fun change of pace from the backend world I usually
-          live in.
-        </p>
-
-        <p>
           When I'm not at a keyboard you'll find me idling at a cafe, picking up
-          yet <i>another</i> book at the bookstore, or deep in a cozy corner
-          with a cup of tea and my steamdeck.
+          yet <i>another</i> book at a bookshop, or deep in a cozy corner with a
+          cup of tea and my steamdeck.
         </p>
       </section>
 

@@ -19,7 +19,7 @@ export default function Aside() {
       <div className="profile-header">
         <img
           className="profile-photo"
-          src={`${import.meta.env.BASE_URL}img/essie.jpeg`}
+          src={`${import.meta.env.BASE_URL}img/essie-sq.jpeg`}
           alt="photo of essie"
           width="80"
           height="80"
