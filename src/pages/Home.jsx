@@ -5,9 +5,10 @@ export default function Home() {
   return (
     <article>
       <div className="home-hero">
-        <h1>i took the scenic route.</h1>
+        <h1>i am a portfolio.</h1>
         <p className="home-tagline">
-          Turns out I liked building things more than analyzing them.
+          A place to practice building things and perhaps a place to practice
+          saying things.
         </p>
       </div>
       <section className="home-cards">
