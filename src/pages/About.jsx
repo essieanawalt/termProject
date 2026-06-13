@@ -13,8 +13,8 @@ export default function About() {
       />
       <p>
         I'm a developer with the career history of someone who took the scenic
-        route. I came to software through finance — an unusual path, but one I
-        wouldn't trade.
+        route. I came to software through finance... turns out I liked building
+        things more than analyzing them.
       </p>
       <p>
         I'm based in Boston, currently building enterprise logistics solutions
