@@ -5,10 +5,13 @@ import Footer from "./Footer";
 export default function Layout({ children }) {
   return (
     <>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <Header />
       <div className="page-layout">
         <Aside />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
       </div>
       <Footer />
     </>

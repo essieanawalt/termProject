@@ -40,7 +40,7 @@
 
 .tag-list li {
   font-size: 0.75rem;
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   background: color-mix(in srgb, var(--color-accent) 15%, transparent);
   border-radius: var(--radius-sm);
   padding: 0.25rem 0.65rem;
@@ -52,7 +52,7 @@
 }
 
 .tag-list li:hover {
-  background: var(--color-accent);
+  background: var(--color-accent-text);
   color: var(--color-text-on-accent);
 }
 

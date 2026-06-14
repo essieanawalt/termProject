@@ -35,7 +35,8 @@
 
 .home-card:hover {
   border-color: var(--color-accent);
-  box-shadow: 0 4px 16px color-mix(in srgb, var(--color-accent) 12%, transparent);
+  box-shadow: 0 4px 16px
+    color-mix(in srgb, var(--color-accent) 12%, transparent);
 }
 
 .home-card-icon {
@@ -45,7 +46,7 @@
 }
 
 .home-card:hover .home-card-icon {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 .home-card h2 {
@@ -62,7 +63,7 @@
 
 .home-card-cta {
   font-size: 0.8rem;
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   letter-spacing: 0.05em;
 }
 
