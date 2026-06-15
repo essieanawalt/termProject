@@ -37,6 +37,12 @@
   font-family: inherit;
 }
 
+.stacked input:focus,
+.stacked textarea:focus {
+  outline: 2px solid var(--color-accent-text);
+  outline-offset: 2px;
+}
+
 .field-error {
   font-size: 0.8rem;
   color: var(--color-error);

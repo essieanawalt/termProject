@@ -12,6 +12,18 @@
   --fjord: #44595a;
   --foggy-sage: #aac0bd;
   --winter-sky: #b3cce1;
+  --river-deep: #2d78aa;
+
+  /* dark */
+  --night-harbor: #1c2230;
+  --deep-dusk: #253044;
+  --tidal-slate: #3a4f5c;
+  --ice-river: #7dbdd6;
+  --warm-mist: #e8e2dc;
+  --sea-mist: #8fa8b0;
+  --pitch-dark: #13181f;
+  --rose-mist: #e08fa0;
+  --deep-forest: #2d5a4e;
 
   /* market */
   --fruit: #b5451b;
@@ -24,12 +36,28 @@
   --color-surface: var(--powder-blue);
   --color-border: var(--foggy-sage);
   --color-accent: var(--river-blue);
+  --color-accent-text: var(--river-deep);
   --color-text: var(--cave-dark);
   --color-text-muted: var(--fjord);
   --color-text-on-accent: var(--near-white);
   --color-footer-bg: var(--cave-dark);
   --color-error: var(--little-my);
   --color-matched: var(--fjord);
+
+  /* -- dark mode -- */
+  :root.dark {
+    --color-bg: var(--night-harbor);
+    --color-surface: var(--deep-dusk);
+    --color-border: var(--tidal-slate);
+    --color-accent: var(--ice-river);
+    --color-accent-text: var(--ice-river);
+    --color-text: var(--warm-mist);
+    --color-text-muted: var(--sea-mist);
+    --color-text-on-accent: var(--warm-mist);
+    --color-footer-bg: var(--pitch-dark);
+    --color-error: var(--rose-mist);
+    --color-matched: var(--deep-forest);
+  }
 
   /* layout */
   --layout-w: 960px;
@@ -47,18 +75,23 @@
     "Nunito", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* -- dark mode -- */
-:root.dark {
-  --color-bg: #1c2230;
-  --color-surface: #253044;
-  --color-border: #3a4f5c;
-  --color-accent: #7dbdd6;
-  --color-text: #e8e2dc;
-  --color-text-muted: #8fa8b0;
-  --color-text-on-accent: #e8e2dc;
-  --color-footer-bg: #13181f;
-  --color-error: #e08fa0;
-  --color-matched: #2d5a4e;
+/* -- skip link -- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-accent-text);
+  color: var(--color-text-on-accent);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  text-decoration: none;
+  z-index: 200;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
 
 /* -- reset -- */
@@ -138,7 +171,7 @@ header.scrolled {
 }
 
 .toggle-theme:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   transform: scale(1.15);
 }
 
@@ -203,7 +236,7 @@ aside {
 }
 
 .sidebar-nav a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 .sidebar-nav a:hover::before,
@@ -212,7 +245,7 @@ aside {
 }
 
 .sidebar-nav a.active {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   font-weight: 600;
 }
 
@@ -299,7 +332,7 @@ aside {
 }
 
 .sidebar-links a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   transform: translateX(4px);
 }
 
@@ -337,7 +370,7 @@ main h1 {
   margin: 1rem auto;
   width: 30%;
   padding: 0.75rem;
-  background-color: var(--color-accent);
+  background-color: var(--color-accent-text);
   color: var(--color-text-on-accent);
   border: none;
   border-radius: 1rem;
@@ -349,7 +382,7 @@ main h1 {
 }
 
 .btn:hover {
-  background-color: color-mix(in srgb, var(--color-accent) 80%, black);
+  background-color: color-mix(in srgb, var(--color-accent-text) 80%, black);
   transform: scale(1.04);
 }
 

@@ -78,7 +78,7 @@ export default function Contact() {
     if (res.ok) {
       setSuccessMessage(
         form.business
-          ? `Thank you ${form.fullName} for your business inquery!`
+          ? `Thank you ${form.fullName} for your business inquiry!`
           : `Thank you ${form.fullName} for your message!`,
       );
       setForm(EMPTY_FORM);
@@ -110,6 +110,7 @@ export default function Contact() {
               value={form.fullName}
               onChange={handleChange}
               onBlur={handleBlur}
+              required
             />
             {/* only show if there's an error for this field */}
             {touched.fullName && errors.fullName && (
@@ -125,6 +126,7 @@ export default function Contact() {
               value={form.email}
               onChange={handleChange}
               onBlur={handleBlur}
+              required
             />
             {touched.email && errors.email && (
               <span className="field-error">{errors.email}</span>
@@ -138,6 +140,7 @@ export default function Contact() {
               value={form.message}
               onChange={handleChange}
               onBlur={handleBlur}
+              required
             />
             {touched.message && errors.message && (
               <span className="field-error">{errors.message}</span>
@@ -152,6 +155,7 @@ export default function Contact() {
               value={form.validation}
               onChange={handleChange}
               onBlur={handleBlur}
+              required
             />
             {touched.validation && errors.validation && (
               <span className="field-error">{errors.validation}</span>
@@ -165,7 +169,7 @@ export default function Contact() {
               checked={form.business}
               onChange={handleChange}
             />
-            <label htmlFor="business">This is a business-related inquery</label>
+            <label htmlFor="business">This is a business-related inquiry</label>
           </p>
           <p>
             <button className="btn" type="submit">
