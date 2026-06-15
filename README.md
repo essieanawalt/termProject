@@ -21,6 +21,8 @@ npm run deploy
 
 Builds and pushes to `gh-pages` via the `gh-pages` package. Always merge to `main` first — `npm run deploy` builds from the working directory, not from git history. Please don't try this one, though :)
 
+Uses `HashRouter` so all routes survive a hard refresh on GitHub Pages — no server config required.
+
 ---
 
 ## Pages
@@ -49,7 +51,7 @@ Built with React and Vite. Styled with plain CSS using custom properties. No UI 
 
 **JavaScript** — form validation with touched-state tracking, game logic, drag-and-drop, Canvas API for produce rendering, SVG generation for animated flower
 
-**React** — hooks (`useState`, `useEffect`, `useRef`, `useLocation`), React Router, component architecture, lazy state initialisation
+**React** — hooks (`useState`, `useEffect`, `useRef`, `useLocation`), React Router with HashRouter for GitHub Pages SPA support, component architecture, lazy state initialisation
 
 **DOM** — `useRef`, `addEventListener`, `classList.toggle`, ARIA attributes (`aria-live`, `aria-pressed`, `aria-hidden`, `role`)
 
@@ -73,3 +75,4 @@ AI assistance (Claude) used for the following:
 - color-mix() solution for using variables in css
 - Word list generation in petal drop game
 - Highlighting opportunities for accessibility improvements
+- HashRouter migration to fix SPA routing on GitHub Pages
