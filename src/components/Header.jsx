@@ -26,7 +26,9 @@ export default function Header() {
           onClick={toggleTheme}
           aria-label="toggle theme"
         >
-          <i className={isDark ? "fa-regular fa-sun" : "fa-regular fa-moon"}></i>
+          <i
+            className={isDark ? "fa-regular fa-sun" : "fa-regular fa-moon"}
+          ></i>
         </button>
       </div>
     </header>

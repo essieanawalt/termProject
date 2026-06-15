@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/contact.css";
 
 const isValidName = (value) => (value.match(/[A-Za-z]/g) || []).length >= 2;
@@ -23,6 +23,10 @@ function validate(data) {
 }
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = "contact · Essie Anawalt";
+  }, []);
+
   const [form, setForm] = useState(EMPTY_FORM);
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
@@ -178,8 +182,8 @@ export default function Contact() {
           </p>
         </form>
       </div>
-      {successMessage && <div id="success-message">{successMessage}</div>}
-      {errorMessage && <div id="error-message">{errorMessage}</div>}
+      {successMessage && <div id="success-message" role="alert">{successMessage}</div>}
+      {errorMessage && <div id="error-message" role="alert">{errorMessage}</div>}
     </>
   );
 }

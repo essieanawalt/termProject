@@ -26,10 +26,10 @@
   --deep-forest: #2d5a4e;
 
   /* market */
-  --fruit: #b5451b;
-  --veggies: #4a7c40;
-  --basket-straw: #d4a84b;
-  --basket-wood: #8b6340;
+  --fruit: #9a5038;
+  --veggies: #4d6b48;
+  --basket-straw: #c4a876;
+  --basket-wood: #7a5a3c;
 
   /* semantic */
   --color-bg: var(--near-white);
@@ -43,21 +43,6 @@
   --color-footer-bg: var(--cave-dark);
   --color-error: var(--little-my);
   --color-matched: var(--fjord);
-
-  /* -- dark mode -- */
-  :root.dark {
-    --color-bg: var(--night-harbor);
-    --color-surface: var(--deep-dusk);
-    --color-border: var(--tidal-slate);
-    --color-accent: var(--ice-river);
-    --color-accent-text: var(--ice-river);
-    --color-text: var(--warm-mist);
-    --color-text-muted: var(--sea-mist);
-    --color-text-on-accent: var(--warm-mist);
-    --color-footer-bg: var(--pitch-dark);
-    --color-error: var(--rose-mist);
-    --color-matched: var(--deep-forest);
-  }
 
   /* layout */
   --layout-w: 960px;
@@ -73,6 +58,21 @@
   --font-serif: Georgia, "Times New Roman", serif;
   --font-sans:
     "Nunito", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* -- dark mode -- */
+:root.dark {
+  --color-bg: var(--night-harbor);
+  --color-surface: var(--deep-dusk);
+  --color-border: var(--tidal-slate);
+  --color-accent: var(--ice-river);
+  --color-accent-text: var(--ice-river);
+  --color-text: var(--warm-mist);
+  --color-text-muted: var(--sea-mist);
+  --color-text-on-accent: var(--warm-mist);
+  --color-footer-bg: var(--pitch-dark);
+  --color-error: var(--rose-mist);
+  --color-matched: var(--deep-forest);
 }
 
 /* -- skip link -- */

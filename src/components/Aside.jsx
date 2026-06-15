@@ -4,9 +4,12 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 export default function Aside() {
   const location = useLocation();
 
-  const isPlayground = ["/playground", "/memory", "/market"].includes(
-    location.pathname,
-  ); // list all new games here
+  const isPlayground = [
+    "/playground",
+    "/memory",
+    "/market",
+    "/petal-drop",
+  ].includes(location.pathname); // list all new games here
   const [subOpen, setSubOpen] = useState(isPlayground);
 
   useEffect(() => {
@@ -54,10 +57,13 @@ export default function Aside() {
           </NavLink>
           <ul className={`sidebar-subnav${subOpen ? " open" : ""}`}>
             <li>
+              <NavLink to="/market">market</NavLink>
+            </li>
+            <li>
               <NavLink to="/memory">memory</NavLink>
             </li>
             <li>
-              <NavLink to="/market">market</NavLink>
+              <NavLink to="/petal-drop">petal drop</NavLink>
             </li>
           </ul>
         </div>

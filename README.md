@@ -25,14 +25,15 @@ Builds and pushes to `gh-pages` via the `gh-pages` package. Always merge to `mai
 
 ## Pages
 
-| Page            | What it is                                        |
-| --------------- | ------------------------------------------------- |
-| Home            | intro / lighter about me                          |
-| About           | biography and background                          |
-| Playground      | hub for the games                                 |
-| Memory Match    | flip cards, find pairs, count your moves          |
-| Farmer's Market | drag-and-drop produce sorting (no mobile support) |
-| Contact         | form with live validation, wired to Formspree     |
+| Page            | What it is                                                              |
+| --------------- | ----------------------------------------------------------------------- |
+| Home            | intro / lighter about me                                                |
+| About           | biography and background                                                |
+| Playground      | hub for the games                                                       |
+| Farmer's Market | drag-and-drop produce sorting (no mobile support)                       |
+| Memory Match    | flip cards, find pairs, count your moves                                |
+| Petal Drop      | word-guessing game with themed word lists and easy/medium/hard settings |
+| Contact         | form with live validation, wired to Formspree                           |
 
 A catch-all 404 route handles unmatched URLs
 
@@ -46,17 +47,19 @@ Built with React and Vite. Styled with plain CSS using custom properties. No UI 
 
 **CSS3** — custom properties, dark/light mode toggle, responsive flexbox + grid, transitions, `color-mix()`
 
-**JavaScript** — form validation with touched-state tracking, game logic, drag-and-drop, Canvas API for produce rendering
+**JavaScript** — form validation with touched-state tracking, game logic, drag-and-drop, Canvas API for produce rendering, SVG generation for animated flower
 
 **React** — hooks (`useState`, `useEffect`, `useRef`, `useLocation`), React Router, component architecture, lazy state initialisation
 
-**DOM** — `useRef`, `addEventListener`, `classList.toggle`
+**DOM** — `useRef`, `addEventListener`, `classList.toggle`, ARIA attributes (`aria-live`, `aria-pressed`, `aria-hidden`, `role`)
 
 ---
 
 ## Extra sparkle
 
 - **HTML5 Drag and Drop API** — Farmer's Market game
+- **Canvas API** — produce drawn in canvas elements in Farmer's Market
+- **SVG** — dynamic flower in Petal Drop; petals generated from data and removed on wrong guesses
 - **External API** — contact form via Formspree
 - **Responsive layout** — CSS flexbox + grid, no frameworks
 
@@ -68,3 +71,5 @@ AI assistance (Claude) used for the following:
 
 - Troubleshooting how gh-pages works alongside git main/deploy post-react migration
 - color-mix() solution for using variables in css
+- Word list generation in petal drop game
+- Highlighting opportunities for accessibility improvements

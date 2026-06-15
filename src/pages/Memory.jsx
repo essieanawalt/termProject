@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/games.css";
 import "../styles/memory.css";
 
@@ -19,6 +19,10 @@ function createCards() {
 }
 
 export default function Memory() {
+  useEffect(() => {
+    document.title = "memory match · Essie Anawalt";
+  }, []);
+
   // passing createCards as a reference so React only runs it once
   // if I write useState(createCards()) it calls it on every render
   const [cards, setCards] = useState(createCards);
@@ -59,7 +63,6 @@ export default function Memory() {
       setCards(next);
       if (next.every((c) => c.matched)) {
         setWins((w) => w + 1);
-        setTimeout(() => alert("WIN!"), 50); // little delay so flip-visual happens
       }
     } else {
       setCards((prev) =>
@@ -101,24 +104,31 @@ export default function Memory() {
 
       <section id="game-board">
         {cards.map((card) => (
-          <div
+          <button
             key={card.id}
             className={`card${card.flipped || card.matched ? " flipped" : ""}${card.matched ? " matched" : ""}`}
             onClick={() => handleCardClick(card)}
+            aria-label={card.matched || card.flipped ? card.emoji : "hidden card"}
           >
             {card.flipped || card.matched ? card.emoji : "🌱"}
-          </div>
+          </button>
         ))}
       </section>
+
+      <div aria-live="polite">
+        {cards.every((c) => c.matched) && (
+          <p className="result-message win">you got them all! ✨</p>
+        )}
+      </div>
 
       <div className="how-to-play">
         <p>
           <strong>how to play</strong>
         </p>
         <ul>
-          <li>🌱 click a card to flip it</li>
-          <li>🖱️ click a second card to try a match</li>
-          <li>✨ find all pairs to win!</li>
+          <li><span aria-hidden="true">🌱</span> click a card to flip it</li>
+          <li><span aria-hidden="true">🖱️</span> click a second card to try a match</li>
+          <li><span aria-hidden="true">✨</span> find all pairs to win!</li>
         </ul>
       </div>
     </>

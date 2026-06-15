@@ -9,6 +9,8 @@
 
 /* card */
 .card {
+  appearance: none;
+  padding: 0;
   aspect-ratio: 1;
   cursor: pointer;
   display: flex;

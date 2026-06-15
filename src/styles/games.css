@@ -70,3 +70,17 @@
   flex-direction: column;
   gap: 0.2rem;
 }
+
+.result-message {
+  font-size: 1rem;
+  font-family: var(--font-serif);
+  margin-top: 0.75rem;
+}
+
+.result-message.win {
+  color: var(--forest-teal);
+}
+
+.result-message.lose {
+  color: var(--color-error);
+}

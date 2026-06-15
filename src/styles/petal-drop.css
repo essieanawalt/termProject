@@ -1,0 +1,194 @@
+/* petal drop specific styles */
+
+.theme-picker {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.theme-btn {
+  font-size: 0.8rem;
+  font-family: var(--font-sans);
+  padding: 0.3rem 0.85rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+  letter-spacing: 0.03em;
+}
+
+.theme-btn:hover {
+  background: var(--color-accent-text);
+  color: var(--color-text-on-accent);
+  border-color: var(--color-accent-text);
+}
+
+.theme-btn.active {
+  background: var(--color-accent-text);
+  color: var(--color-text-on-accent);
+  border-color: var(--color-accent-text);
+}
+
+.difficulty-inline {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.difficulty-opt {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  color: var(--color-text-muted);
+  padding: 0;
+  opacity: 0.5;
+  transition:
+    opacity 0.15s ease,
+    color 0.15s ease;
+}
+
+.difficulty-opt.active {
+  color: var(--color-text);
+  opacity: 1;
+  font-weight: 600;
+}
+
+.difficulty-opt:hover:not(.active) {
+  opacity: 0.8;
+}
+
+.difficulty-sep {
+  color: var(--color-border);
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+.petal-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.petal-flower {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+}
+
+.petal-flower .stem {
+  stroke: var(--forest-teal);
+  stroke-width: 4;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.petal-flower .leaf {
+  fill: var(--forest-teal);
+  opacity: 0.8;
+}
+
+.petal-flower .petal {
+  fill: var(--soft-pink);
+  stroke: var(--little-my);
+  stroke-width: 1;
+}
+
+.petal-flower .flower-center {
+  fill: var(--basket-straw);
+  stroke: var(--basket-wood);
+  stroke-width: 1.5;
+}
+
+.word-display {
+  display: flex;
+  gap: 0.2rem;
+  flex-wrap: nowrap;
+  margin-bottom: 1.5rem;
+}
+
+.letter-slot {
+  font-size: 1.25rem;
+  font-family: var(--font-serif);
+  width: 1.4rem;
+  text-align: center;
+  border-bottom: 2px solid var(--color-text);
+  padding-bottom: 0.2rem;
+  text-transform: lowercase;
+  min-height: 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.letter-slot.revealed {
+  color: var(--color-error);
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.letter-btn {
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.letter-btn:not(:disabled):hover {
+  background: var(--color-accent-text);
+  color: var(--color-text-on-accent);
+  border-color: var(--color-accent-text);
+}
+
+.letter-btn.correct {
+  background: var(--forest-teal);
+  color: var(--near-white);
+  border-color: var(--forest-teal);
+}
+
+.letter-btn.wrong {
+  background: transparent;
+  color: var(--color-error);
+  border-color: var(--color-error);
+  opacity: 0.55;
+}
+
+.letter-btn:disabled {
+  cursor: default;
+}
+
+@media (max-width: 600px) {
+  .petal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .petal-flower {
+    max-width: 150px;
+  }
+}

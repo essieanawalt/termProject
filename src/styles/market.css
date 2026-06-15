@@ -71,15 +71,15 @@
   background-image:
     repeating-linear-gradient(
       45deg,
-      rgba(139, 99, 64, 0.12) 0px,
-      rgba(139, 99, 64, 0.12) 1px,
+      color-mix(in srgb, var(--basket-wood) 12%, transparent) 0px,
+      color-mix(in srgb, var(--basket-wood) 12%, transparent) 1px,
       transparent 1px,
       transparent 8px
     ),
     repeating-linear-gradient(
       -45deg,
-      rgba(139, 99, 64, 0.12) 0px,
-      rgba(139, 99, 64, 0.12) 1px,
+      color-mix(in srgb, var(--basket-wood) 12%, transparent) 0px,
+      color-mix(in srgb, var(--basket-wood) 12%, transparent) 1px,
       transparent 1px,
       transparent 8px
     );

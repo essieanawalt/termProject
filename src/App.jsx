@@ -5,7 +5,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Memory from "./pages/Memory";
 import Market from "./pages/Market";
+import PetalDrop from "./pages/PetalDrop";
 import Playground from "./pages/Playground";
+import NotFound from "./pages/NotFound";
 
 // to add a new page: import it, add a Route, and create the .jsx file in pages/
 export default function App() {
@@ -60,13 +62,18 @@ export default function App() {
         }
       />
       <Route
+        path="/petal-drop"
+        element={
+          <Layout>
+            <PetalDrop />
+          </Layout>
+        }
+      />
+      <Route
         path="*"
         element={
           <Layout>
-            <article>
-              <h1>page not found</h1>
-              <p>This page doesn't exist.</p>
-            </article>
+            <NotFound />
           </Layout>
         }
       />
