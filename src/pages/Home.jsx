@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/home.css";
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Essie Anawalt";
+  }, []);
+
   return (
     <article>
       <div className="home-hero">

@@ -24,8 +24,14 @@
   box-shadow: 0 6px 20px color-mix(in srgb, var(--deep-mire) 10%, transparent);
 }
 
-.game-card-emoji {
-  font-size: 1.75rem;
+.game-card-icon {
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+}
+
+.game-card:hover .game-card-icon {
+  color: var(--color-accent-text);
 }
 
 .game-card h2 {

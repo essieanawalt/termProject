@@ -35,6 +35,10 @@ function ProduceCanvas({ item, onDragStart }) {
 }
 
 export default function Market() {
+  useEffect(() => {
+    document.title = "farmer's market · Essie Anawalt";
+  }, []);
+
   const [items, setItems] = useState([]);
   const draggedId = useRef(null);
   const batchRef = useRef(0);
@@ -187,9 +191,9 @@ export default function Market() {
           <strong>how to play</strong>
         </p>
         <ul>
-          <li>🧺 click the button to drop the crate</li>
-          <li>🫴 drag each item to the correct basket</li>
-          <li>✨ sort them all to save the day!</li>
+          <li><span aria-hidden="true">🧺</span> click the button to drop the crate</li>
+          <li><span aria-hidden="true">🫴</span> drag each item to the correct basket</li>
+          <li><span aria-hidden="true">✨</span> sort them all to save the day!</li>
         </ul>
       </div>
     </>
